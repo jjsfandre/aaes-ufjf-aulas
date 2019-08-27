@@ -19,13 +19,12 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     </head>
     <body>
 
-    <h1>Menu inicial</h1>
-    <p><a href="Contato/formSaveContato.jsp"> Cadastrar contato </a></p>
-    <p><a href="Contato/formListContato.jsp"> Ler contato </a></p>
-    <p><a href="Contato/formDeleteContato.jsp"> Apagar contato </a></p>
-    <p><a href="Empresa/formSaveEmpresa.jsp"> Cadastrar empresa </a></p>
-    <p><a href="Empresa/formListEmpresa.jsp"> Ler empresa</a></p>
-    <p><a href="Empresa/formDeleteEmpresa.jsp"> Apagar empresa </a></p>
+    <h1>Apagar Empresa</h1>
+    <form action="../FrontController?action=ApagarEmpresa" method="post">
+      Entre com nome
+      <input type="text" name="textNome"/><br/>
+      <input type="submit"/>
+    </form>
     <%--
     This example uses JSTL, uncomment the taglib directive above.
     To test, display the page like this: index.jsp?sayHello=true&name=Murphy

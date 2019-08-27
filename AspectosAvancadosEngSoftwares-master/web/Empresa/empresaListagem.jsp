@@ -15,16 +15,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Listando contatos</h1>
+        <h1>Listando empresas</h1>
         <table>            
               <tr>
+                <td>#</td>
                 <td>Nome</td>
-                <td>Email</td>
               </tr>
-            <c:forEach items="${listContatos}" var="contato">
+            <c:forEach items="${listEmpresas}" var="empresa">
               <tr>
-                <td><c:out value="${contato.getNome()}" /></td>
-                <td><c:out value="${contato.getEmail()}" /></td>
+                <td><c:out value="${empresa.getId()}" /></td>
+                <td><c:out value="${empresa.getNome()}" /></td>
               </tr>
             </c:forEach>
         </table>

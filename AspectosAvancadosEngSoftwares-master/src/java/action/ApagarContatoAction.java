@@ -29,9 +29,9 @@ public class ApagarContatoAction implements Action{
         } else {
             try{
                 ContatoDAO.getInstance().deleteByEmail(email);
-                response.sendRedirect("contatoExclusaoSucesso.jsp");
+                response.sendRedirect("Contato/contatoExclusaoSucesso.jsp");
             } catch(SQLException ex){
-                response.sendRedirect("contatoErro.jsp");
+                response.sendRedirect("erro.jsp");
                 ex.printStackTrace();
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(GravarContatoAction.class.getName()).log(Level.SEVERE, null, ex);

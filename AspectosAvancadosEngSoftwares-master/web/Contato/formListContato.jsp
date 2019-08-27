@@ -19,8 +19,8 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     </head>
     <body>
 
-    <h1>Apagar Contato</h1>
-    <form action="FrontController?action=ApagarContato" method="post">
+    <h1>Listar Contatos</h1>
+    <form action="../FrontController?action=LerContato" method="post">
       Entre com seu email
       <input type="text" name="textEmail"/><br/>
       <input type="submit"/>

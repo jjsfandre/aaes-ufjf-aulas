@@ -12,26 +12,26 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import model.Contato;
+import model.Empresa;
 
 /**
  *
  * @author Anderson
  */
-public class ContatoDAO {
-    private static ContatoDAO instance = new ContatoDAO();
-    public static ContatoDAO getInstance(){
+public class EmpresaDAO {
+    private static EmpresaDAO instance = new EmpresaDAO();
+    public static EmpresaDAO getInstance(){
         return instance;
     }
     
-    public void save(Contato contato) throws SQLException, ClassNotFoundException{
+    public void save(Empresa empresa) throws SQLException, ClassNotFoundException{
         Connection conn = null;
         Statement st = null;
         try {
                 conn = DatabaseLocator.getInstance().getConection();
                 st = conn.createStatement();
-                st.execute("insert into contato (nome, email,idEmpresa)" +
-                        " values ('" + contato.getNome() + "', '" + contato.getEmail() + 
-                        "', '"+contato.getIdEmpresa().toString()+ "')");
+                st.execute("insert into empresa (nome)" +
+                        " values ('" + empresa.getNome() + "')");
             } catch(SQLException e) {
                 throw e;
             } finally {
@@ -48,13 +48,13 @@ public class ContatoDAO {
         }
     }
 
-    public void deleteByEmail(String email)  throws SQLException, ClassNotFoundException{
+    public void deleteByNome(String nome)  throws SQLException, ClassNotFoundException{
         Connection conn = null;
         Statement st = null;
         try {
                 conn = DatabaseLocator.getInstance().getConection();
                 st = conn.createStatement();
-                st.execute("delete from contato where email = '" + email+"'");
+                st.execute("delete from empresa where nome = '" + nome+"'");
             } catch(SQLException e) {
                 throw e;
             } finally {
@@ -62,32 +62,31 @@ public class ContatoDAO {
             }
     }
     
-    public List<Contato> getContatosByEmail(String emailParam)  throws SQLException, ClassNotFoundException{
+    public List<Empresa> getEmpresasByNome(String nomeParam)  throws SQLException, ClassNotFoundException{
         Connection conn = null;
         Statement st = null;
-        List<Contato> listaContatos = new ArrayList();
+        List<Empresa> listaEmpresas = new ArrayList();
         try {
                 conn = DatabaseLocator.getInstance().getConection();
                 st = conn.createStatement();
                 
                 // execute the query, and get a java resultset
-                ResultSet rs = st.executeQuery("select id,nome,email,idEmpresa from contato where email = '" + emailParam+"'");
+                ResultSet rs = st.executeQuery("select id,nome from empresa where nome = '" + nomeParam+"'");
                 
                 // iterate through the java resultset
                 while (rs.next())
                 {
-                    String nome = rs.getString("nome");
-                    String email = rs.getString("email");
                     Long id = rs.getLong("id");
-                    Long idEmpresa = rs.getLong("idEmpresa");
-                    listaContatos.add(new Contato(id, nome,email,idEmpresa));
+                    String nome = rs.getString("nome");
+                    
+                    listaEmpresas.add(new Empresa(id,nome));
                 }
             } catch(SQLException e) {
                 throw e;
             } finally {
                 closeResources(conn, st);
             }
-        return listaContatos;
+        return listaEmpresas;
     }
 
 }

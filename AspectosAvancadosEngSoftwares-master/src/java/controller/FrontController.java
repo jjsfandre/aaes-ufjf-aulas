@@ -36,13 +36,7 @@ public class FrontController extends HttpServlet {
         Action actionObject = null;
         if (action==null || action.equals(""))
             response.sendRedirect("index.jsp");
-        if (action.equals("GravarContato")){
-            actionObject = new GravarContatoAction();
-        } else if (action.equals("LerContato")){
-            actionObject = new LerContatoAction();
-        } else if (action.equals("ApagarContato")){
-            actionObject = new ApagarContatoAction();
-        }
+        actionObject = ActionFactory.create(action);
         if (actionObject != null){
             actionObject.execute(request, response);
         }

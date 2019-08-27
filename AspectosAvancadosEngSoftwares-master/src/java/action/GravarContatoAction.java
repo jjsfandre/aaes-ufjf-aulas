@@ -24,16 +24,17 @@ public class GravarContatoAction  implements Action{
             throws IOException{
         String nome = request.getParameter("textNome");
         String email = request.getParameter("textEmail");
+        Long idEmpresa = Long.parseLong(request.getParameter("textIdEmpresa"));
         
         if(nome.equals("") || email.equals("")) {
            //<p>Nome e email sao dados obrigatorios...</p>
         } else {
             try{
-                Contato contato = new Contato(nome, email);
+                Contato contato = new Contato(nome, email, idEmpresa);
                 ContatoDAO.getInstance().save(contato);
-                response.sendRedirect("contatoSucesso.jsp");
+                response.sendRedirect("Contato/contatoGravacaoSucesso.jsp");
             } catch(SQLException ex){
-                response.sendRedirect("contatoErro.jsp");
+                response.sendRedirect("erro.jsp");
                 ex.printStackTrace();
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(GravarContatoAction.class.getName()).log(Level.SEVERE, null, ex);

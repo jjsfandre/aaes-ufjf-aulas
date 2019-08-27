@@ -10,16 +10,28 @@ package model;
  * @author ice
  */
 public class Contato {
+    private Long id;
     private String nome;
     private String email;
+    private Long idEmpresa;
 
     public Contato() {
     }
     
-    public Contato(String nome, String email) {
+    public Contato(Long id, String nome, String email, Long idEmpresa) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
+        this.idEmpresa = idEmpresa;
     }
+
+    public Contato(String nome, String email, Long idEmpresa) {
+        this.nome = nome;
+        this.email = email;
+        this.idEmpresa = idEmpresa;
+    }
+    
+    
 
     public String getNome() {
         return nome;
@@ -36,5 +48,25 @@ public class Contato {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getIdEmpresa() {
+        return idEmpresa;
+    }
+
+    public void setIdEmpresa(Long idEmpresa) {
+        this.idEmpresa = idEmpresa;
+    }
+    
+    
+    
+    
     
 }
