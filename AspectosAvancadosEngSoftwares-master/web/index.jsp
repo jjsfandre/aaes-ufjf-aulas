@@ -20,7 +20,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     <body>
 
     <h1>Menu inicial</h1>
-    <p><a href="Contato/formSaveContato.jsp"> Cadastrar contato </a></p>
+    <p><a href="FrontController?action=FormNovoContato"> Cadastrar contato </a></p>
     <p><a href="Contato/formListContato.jsp"> Ler contato </a></p>
     <p><a href="Contato/formDeleteContato.jsp"> Apagar contato </a></p>
     <p><a href="Empresa/formSaveEmpresa.jsp"> Cadastrar empresa </a></p>

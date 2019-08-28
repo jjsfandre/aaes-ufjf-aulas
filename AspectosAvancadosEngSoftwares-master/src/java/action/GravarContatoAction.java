@@ -24,12 +24,14 @@ public class GravarContatoAction  implements Action{
             throws IOException{
         String nome = request.getParameter("textNome");
         String email = request.getParameter("textEmail");
-        Long idEmpresa = Long.parseLong(request.getParameter("textIdEmpresa"));
+        String idEmpresaText = request.getParameter("textIdEmpresa");
         
-        if(nome.equals("") || email.equals("")) {
+        
+        if(nome.equals("") || email.equals("") || idEmpresaText.equals("")) {
            //<p>Nome e email sao dados obrigatorios...</p>
         } else {
             try{
+                Long idEmpresa = Long.parseLong(idEmpresaText);
                 Contato contato = new Contato(nome, email, idEmpresa);
                 ContatoDAO.getInstance().save(contato);
                 response.sendRedirect("Contato/contatoGravacaoSucesso.jsp");

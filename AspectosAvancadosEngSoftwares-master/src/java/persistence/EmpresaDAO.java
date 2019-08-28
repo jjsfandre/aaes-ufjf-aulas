@@ -88,5 +88,34 @@ public class EmpresaDAO {
             }
         return listaEmpresas;
     }
+    
+    
+    
+    public List<Empresa> getEmpresas()  throws SQLException, ClassNotFoundException{
+        Connection conn = null;
+        Statement st = null;
+        List<Empresa> listaEmpresas = new ArrayList();
+        try {
+                conn = DatabaseLocator.getInstance().getConection();
+                st = conn.createStatement();
+                
+                // execute the query, and get a java resultset
+                ResultSet rs = st.executeQuery("select id,nome from empresa");
+                
+                // iterate through the java resultset
+                while (rs.next())
+                {
+                    Long id = rs.getLong("id");
+                    String nome = rs.getString("nome");
+                    
+                    listaEmpresas.add(new Empresa(id,nome));
+                }
+            } catch(SQLException e) {
+                throw e;
+            } finally {
+                closeResources(conn, st);
+            }
+        return listaEmpresas;
+    }
 
 }

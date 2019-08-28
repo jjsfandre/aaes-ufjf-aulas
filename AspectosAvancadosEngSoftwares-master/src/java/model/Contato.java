@@ -14,6 +14,7 @@ public class Contato {
     private String nome;
     private String email;
     private Long idEmpresa;
+    private String nomeEmpresa;
 
     public Contato() {
     }
@@ -64,6 +65,15 @@ public class Contato {
     public void setIdEmpresa(Long idEmpresa) {
         this.idEmpresa = idEmpresa;
     }
+
+    public String getNomeEmpresa() {
+        return nomeEmpresa;
+    }
+
+    public void setNomeEmpresa(String nomeEmpresa) {
+        this.nomeEmpresa = nomeEmpresa;
+    }
+    
     
     
     

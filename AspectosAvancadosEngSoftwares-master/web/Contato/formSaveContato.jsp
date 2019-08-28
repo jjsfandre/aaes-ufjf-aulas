@@ -1,5 +1,6 @@
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
 The taglib directive below imports the JSTL library. If you uncomment it,
 you must also add the JSTL library to the project. The Add Library... action
@@ -20,11 +21,18 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     <body>
 
     <h1>Cadastro de Contatos</h1>
-    <form action="../FrontController?action=GravarContato" method="post">
+    <form action="FrontController?action=GravarContato" method="post">
       Entre com seu nome
       <input type="text" name="textNome"/><br/>
       Entre com seu email
       <input type="text" name="textEmail"/><br/>
+      Escolha a empresa
+      <select name="textIdEmpresa">
+          <option value="">Selecione...</option>
+            <c:forEach items="${listEmpresas}" var="empresa">
+                <option value="${empresa.id}">${empresa.nome}</option>  
+            </c:forEach>
+        </select>
       <input type="submit"/>
     </form>
     <%--
