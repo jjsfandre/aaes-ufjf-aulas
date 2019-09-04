@@ -3,25 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/GravarEmpresaAction.java</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Empresa/formListEmpresa.jsp</file>
+            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/model/Contato.java</file>
+            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/FormNovoContatoAction.java</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/LerEmpresaAction.java</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Empresa/formDeleteEmpresa.jsp</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Contato/formSaveContato.jsp</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Contato/contatoListagem.jsp</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/GravarContatoAction.java</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/persistence/ContatoDAO.java</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Empresa/empresaExclusaoSucesso.jsp</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Empresa/empresaGravacaoSucesso.jsp</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/model/Empresa.java</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/model/Contato.java</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/persistence/EmpresaDAO.java</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/LerContatoAction.java</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Empresa/formSaveEmpresa.jsp</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/ApagarContatoAction.java</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Contato/formDeleteContato.jsp</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Contato/formListContato.jsp</file>
-            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/ApagarEmpresaAction.java</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Empresa/empresaListagem.jsp</file>
         </group>
     </open-files>
