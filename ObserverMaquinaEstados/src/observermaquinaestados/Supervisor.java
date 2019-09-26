@@ -36,7 +36,7 @@ public class Supervisor implements Observer{
         String novoEstado;
         if (o instanceof Obra){
             Obra obra = (Obra) o;
-            novoEstado = obra.getEstado();
+            novoEstado = obra.getEstadoToString();
             System.out.println("Atenção "+ getNome() +
                     ", a obra " + obra.getDescricao() +
                      " teve seu estado alterado. " +

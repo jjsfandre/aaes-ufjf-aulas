@@ -26,7 +26,7 @@ public class ObserverMaquinaEstados {
         
         s1.addObserver(o1);
         s2.addObserver(o2);
-        
+                
         o1.setEstado(new ObraEstadoEmProjeto());
         o2.setEstado(new ObraEstadoEmProjeto());
         

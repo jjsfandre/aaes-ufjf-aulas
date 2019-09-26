@@ -8,6 +8,7 @@ package observermaquinaestados;
 import java.util.Observable;
 import observermaquinaestados.obrastatus.ObraEstado;
 import observermaquinaestados.obrastatus.ObraEstadoEmProjeto;
+import observermaquinaestados.obrastatus.ObraEstadoFinalizada;
 
 /**
  *
@@ -41,14 +42,20 @@ public class Obra extends Observable{
         this.descricao = descricao;
     }
 
-    public String getEstado() {
+    public String getEstadoToString() {
         return estado.getEstado();
+    }
+    
+    public ObraEstado getEstado(){
+        return estado;
     }
 
     public void setEstado(ObraEstado estado) {
         this.estado = estado;
-        setChanged();
-        notifyObservers();
+        if (estado instanceof ObraEstadoFinalizada){
+            setChanged();
+            notifyObservers();
+        }
     }
     
     

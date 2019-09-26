@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/model/Contato.java</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/FormNovoContatoAction.java</file>
+            <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/LerContatoAction.java</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/LerEmpresaAction.java</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/web/Contato/formSaveContato.jsp</file>
             <file>file:/C:/UFJF/AAES/aaes-ufjf-aulas/AspectosAvancadosEngSoftwares-master/src/java/action/GravarContatoAction.java</file>

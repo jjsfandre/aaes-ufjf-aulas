@@ -5,6 +5,8 @@
  */
 package observermaquinaestados.obrastatus;
 
+import observermaquinaestados.Obra;
+
 /**
  *
  * @author jjsfa
@@ -12,22 +14,25 @@ package observermaquinaestados.obrastatus;
 public class ObraEstadoEmProjeto implements ObraEstado {
 
     @Override
-    public String iniciarProjeto() {
+    public String iniciarProjeto(Obra o) {
         return "Projeto já inciado.";
     }
 
     @Override
-    public String iniciar() {
+    public String iniciar(Obra o) {
+        o.setEstado(new ObraEstadoEmAndamento());
         return "Obra em andamento";
     }
 
     @Override
-    public String suspender() {
+    public String suspender(Obra o) {
+        o.setEstado(new ObraEstadoSuspensa());
         return "Obra suspensa";
     }
 
     @Override
-    public String finalizar() {
+    public String finalizar(Obra o) {
+        o.setEstado(new ObraEstadoFinalizada());
         return "Obra finalizada";
     }
 

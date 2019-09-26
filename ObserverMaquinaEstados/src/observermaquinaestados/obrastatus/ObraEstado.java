@@ -5,6 +5,8 @@
  */
 package observermaquinaestados.obrastatus;
 
+import observermaquinaestados.Obra;
+
 /**
  *
  * @author jjsfa
@@ -13,11 +15,11 @@ public interface ObraEstado {
     
     public String getEstado();
     
-    public String iniciarProjeto();
+    public String iniciarProjeto(Obra o);
     
-    public String iniciar();
+    public String iniciar(Obra o);
     
-    public String suspender();
+    public String suspender(Obra o);
     
-    public String finalizar();
+    public String finalizar(Obra o);
 }
